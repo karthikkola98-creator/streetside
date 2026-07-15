@@ -1,0 +1,367 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    background:#111;
+}
+
+/* Background */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:url("assets/background.jpg") center center/cover no-repeat;
+    
+    transform:scale(1,1);
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    z-index:-2;
+}
+
+/* Center */
+
+.container{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+/* Glass Card */
+
+.glass-card{
+    width:100%;
+    max-width:360px;          /* Smaller card */
+
+
+    padding:20px 18px;        /* Less top and side spacing */
+
+   
+
+    text-align:center;
+    align-items: center;
+        position: relative;
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    border: 1px solid rgba(255,255,255,0.30);
+    border-radius: 40px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+}
+
+/* Logo */
+
+/* Hanger Logo */
+.main-logo{
+    width:130px;
+    
+}
+
+/* StreetSide Text PNG */
+.brand-name{
+    width:380px;
+    display:block;
+    align-items: center;
+   
+}
+.logo p{
+
+    color:#ffffff;
+
+    margin-top:10px;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+.logo span{
+
+display:block;
+
+margin-top:5px;
+
+font-size:16px;
+
+color:#ffffff;
+
+}
+
+/* Social */
+
+.social{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.social a{
+
+width:55px;
+
+height:55px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:#111;
+
+color:#ffffff;
+
+font-size:22px;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.social a:hover{
+
+transform:translateY(-6px);
+
+background:#d6ad48;
+
+color:#111;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+margin-top:25px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.btn{
+
+height:55px;
+
+border-radius:18px;
+
+background:#111;
+
+display:flex;
+
+align-items:center;
+
+padding:0 28px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+transition:.35s;
+
+border:1px solid rgba(212,170,63,.5);
+
+}
+
+.btn i{
+
+width:50px;
+
+font-size:22px;
+
+color:#ffffff;
+
+}
+
+.btn span{
+
+flex:1;
+
+text-align:center;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+background:#d6ad48;
+
+color:#111;
+
+}
+
+.btn:hover i{
+
+color:#111;
+
+}
+
+/* Desktop */
+
+@media(min-width:920px){
+
+.glass-card{
+
+max-width:470px;
+
+padding:50px;
+
+}
+
+.logo h1{
+
+font-size:48px;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+ .background{
+    background: url("assets/background-mobile.jpeg") center center/cover no-repeat;
+}
+   
+
+.glass-card{
+    width:98%;
+    max-width:360px;
+    padding:20px;
+
+}
+
+.brand-name{
+    width:320px;
+    max-width:100%;
+    align-items: center;
+}
+
+.logo span{
+    font-size:14px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.logo p{
+    font-size:13px;
+    letter-spacing:4px;
+}
+
+.btn{
+    height:50px;
+  
+}
+
+.social{
+    gap:11px;
+    margin:25px 0;
+}
+
+.social a{
+    width:50px;
+    height:50px;
+}
+}
+
+
+.contact-dropdown {
+    width: 100%;
+}
+
+.contact-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.contact-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.contact-box {
+    margin-top: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.contact-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.title-line{
+    width:320px;
+    height:2px;
+    margin: 12px auto;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.9),
+        transparent
+    );
+    box-shadow:0 0 10px rgba(255,255,255,.5);
+}
+
+.tagline{
+    margin-top:5px;
+}
+
+.subtitle{
+    margin-top:12px;
+}
